@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="color-scheme" content="dark light">
     <title>elytra.net</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,16 +13,24 @@
   </head>
   <body>
     <div class="main">
-        <img src="images/elytra_logo.png" alt="elytra.net wordmark with ladybug beetle"/>
+        <picture>
+            <source 
+              srcset="images/elytra_logo_dark.png" 
+              media="(prefers-color-scheme: dark)">
+              <img src="images/elytra_logo.png" alt="elytra.net wordmark with ladybug beetle"/>
+          </picture>
+
         <div class="tagline">
             web development
         </div>
-        <a href="mailto:andrew@elytra.net">
-            <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_2iszWM.json"  background="transparent"  speed="0.5"  style="width: 150px; height: 150px;"  loop  autoplay></lottie-player>
-        </a>
-        <a href="https://github.com/a-pasquale">
-            <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_S6vWEd.json"  background="transparent"  speed="1"  style="width: 150; height: 150px;"  loop  autoplay></lottie-player>
-        </a>
+        <div class="contact">
+            <a href="mailto:andrew@elytra.net">
+                <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_2iszWM.json"  background="rgba(255,255,255,0.5)"  speed="0.5"  class="icon"  loop  autoplay></lottie-player>
+            </a>
+            <a href="https://github.com/a-pasquale" class="github">
+                <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_S6vWEd.json"  background="rgba(255,255,255,0.5)"  speed="1"  class="icon" loop  autoplay></lottie-player>
+            </a>
+        </div>
     </div>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   </body>

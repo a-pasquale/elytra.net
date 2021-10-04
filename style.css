@@ -1,11 +1,49 @@
+body {
+    --text-color: #222;
+    --bg-color: #fff;
+}
+body.dark-theme {
+    --text-color: #eee;
+    --bg-color: #121212;
+}
+@media (prefers-color-scheme: dark) {
+    /* defaults to dark theme */
+    body {
+        --text-color: #eee;
+        --bg-color: #121212;
+    }
+    body.light-theme {
+        --text-color: #222;
+        --bg-color: #fff;
+    }
+}
+body {
+    background-color: var(--bg-color);
+}
 .main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: var(--bg-color)
 }
 .tagline {
     font-family: 'open sans';
     font-size: 22px;
+    color: var(--text-color);
+}
+.contact {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.icon {
+    width: 100px;
+    height: 100px;
+    margin: 30px;
+    border-radius: 50%;
+    overflow: hidden;
 }
